@@ -1,0 +1,30 @@
+<div class="row">
+  <div class="row justify-content-center">
+    <div class="col-6">
+      <div class="input-group mb-3">
+        <input
+          type="text"
+          (keyup.enter)="add(txtName.value)"
+          class="form-control form-control-lg"
+          placeholder="Framework name"
+          #txtName
+        />
+        <button
+          (click)="add(txtName.value)"
+          class="input-group-text btn btn-warning"
+        >
+          ADD
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-6 mt-4">
+      <ul class="list-group list-group-flush">
+        <li *ngFor="let framework of frameworksList" class="list-group-item">
+          {{ framework }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
